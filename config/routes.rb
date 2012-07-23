@@ -1,4 +1,6 @@
 AlphaP::Application.routes.draw do
+  resources :objects_infos
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
