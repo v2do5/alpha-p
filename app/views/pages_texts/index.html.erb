@@ -1,0 +1,25 @@
+<h1>Listing pages_texts</h1>
+
+<table>
+  <tr>
+    <th>Page name</th>
+    <th>Page text</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @pages_texts.each do |pages_text| %>
+  <tr>
+    <td><%= pages_text.page_name %></td>
+    <td><%= pages_text.page_text %></td>
+    <td><%= link_to 'Show', pages_text %></td>
+    <td><%= link_to 'Edit', edit_pages_text_path(pages_text) %></td>
+    <td><%= link_to 'Destroy', pages_text, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Pages text', new_pages_text_path %>

@@ -1,0 +1,2 @@
+module ObjectsInfosHelper
+end

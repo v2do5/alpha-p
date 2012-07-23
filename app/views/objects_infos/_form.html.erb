@@ -1,0 +1,45 @@
+<%= form_for(@objects_info) do |f| %>
+  <% if @objects_info.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@objects_info.errors.count, "error") %> prohibited this objects_info from being saved:</h2>
+
+      <ul>
+      <% @objects_info.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :obj_name %><br />
+    <%= f.text_area :obj_name %>
+  </div>
+  <div class="field">
+    <%= f.label :obj_type %><br />
+    <%= f.text_area :obj_type %>
+  </div>
+  <div class="field">
+    <%= f.label :obj_adress %><br />
+    <%= f.text_area :obj_adress %>
+  </div>
+  <div class="field">
+    <%= f.label :obj_info %><br />
+    <%= f.text_area :obj_info %>
+  </div>
+  <div class="field">
+    <%= f.label :obj_room_num %><br />
+    <%= f.text_area :obj_room_num %>
+  </div>
+  <div class="field">
+    <%= f.label :obj_area_square %><br />
+    <%= f.text_area :obj_area_square %>
+  </div>
+  <div class="field">
+    <%= f.label :obj_price %><br />
+    <%= f.text_area :obj_price %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

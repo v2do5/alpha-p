@@ -1,0 +1,35 @@
+<h1>Listing objects_infos</h1>
+
+<table>
+  <tr>
+    <th>Obj name</th>
+    <th>Obj type</th>
+    <th>Obj adress</th>
+    <th>Obj info</th>
+    <th>Obj room num</th>
+    <th>Obj area square</th>
+    <th>Obj price</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @objects_infos.each do |objects_info| %>
+  <tr>
+    <td><%= objects_info.obj_name %></td>
+    <td><%= objects_info.obj_type %></td>
+    <td><%= objects_info.obj_adress %></td>
+    <td><%= objects_info.obj_info %></td>
+    <td><%= objects_info.obj_room_num %></td>
+    <td><%= objects_info.obj_area_square %></td>
+    <td><%= objects_info.obj_price %></td>
+    <td><%= link_to 'Show', objects_info %></td>
+    <td><%= link_to 'Edit', edit_objects_info_path(objects_info) %></td>
+    <td><%= link_to 'Destroy', objects_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Objects info', new_objects_info_path %>

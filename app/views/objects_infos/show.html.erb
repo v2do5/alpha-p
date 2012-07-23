@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Obj name:</b>
+  <%= @objects_info.obj_name %>
+</p>
+
+<p>
+  <b>Obj type:</b>
+  <%= @objects_info.obj_type %>
+</p>
+
+<p>
+  <b>Obj adress:</b>
+  <%= @objects_info.obj_adress %>
+</p>
+
+<p>
+  <b>Obj info:</b>
+  <%= @objects_info.obj_info %>
+</p>
+
+<p>
+  <b>Obj room num:</b>
+  <%= @objects_info.obj_room_num %>
+</p>
+
+<p>
+  <b>Obj area square:</b>
+  <%= @objects_info.obj_area_square %>
+</p>
+
+<p>
+  <b>Obj price:</b>
+  <%= @objects_info.obj_price %>
+</p>
+
+
+<%= link_to 'Edit', edit_objects_info_path(@objects_info) %> |
+<%= link_to 'Back', objects_infos_path %>

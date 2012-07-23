@@ -1,0 +1,2 @@
+module PagesTextsHelper
+end

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  obj_name: MyText
+  obj_type: MyText
+  obj_adress: MyText
+  obj_info: MyText
+  obj_room_num: MyText
+  obj_area_square: MyText
+  obj_price: MyText
+
+two:
+  obj_name: MyText
+  obj_type: MyText
+  obj_adress: MyText
+  obj_info: MyText
+  obj_room_num: MyText
+  obj_area_square: MyText
+  obj_price: MyText
