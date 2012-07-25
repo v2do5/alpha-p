@@ -2,13 +2,13 @@
 
 <table>
   <tr>
-    <th>Obj name</th>
-    <th>Obj type</th>
-    <th>Obj adress</th>
-    <th>Obj info</th>
-    <th>Obj room num</th>
-    <th>Obj area square</th>
-    <th>Obj price</th>
+    <th>Название</th>
+    <th>Категория</th>
+    <th>Адрес</th>
+    <th>Информация</th>
+    <th>Комнаты</th>
+    <th>Площадь</th>
+    <th>Цена</th>
     <th></th>
     <th></th>
     <th></th>
@@ -23,9 +23,9 @@
     <td><%= objects_info.obj_room_num %></td>
     <td><%= objects_info.obj_area_square %></td>
     <td><%= objects_info.obj_price %></td>
-    <td><%= link_to 'Show', objects_info %></td>
-    <td><%= link_to 'Edit', edit_objects_info_path(objects_info) %></td>
-    <td><%= link_to 'Destroy', objects_info, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Показать', objects_info %></td>
+    <td><%= link_to 'Редактировать', edit_objects_info_path(objects_info) %></td>
+    <td><%= link_to 'Удалить', objects_info, method: :delete, data: { confirm: 'Точно удалить?' } %></td>
   </tr>
 <% end %>
 </table>

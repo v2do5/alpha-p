@@ -28,6 +28,11 @@ group :test do
   gem 'webrat', '0.7.1'
 end
 
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'rmagick'
+gem 'kaminari'
+
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password

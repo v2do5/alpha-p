@@ -1,7 +1,14 @@
 AlphaP::Application.routes.draw do
-  resources :pages_texts
+  resources :scans
+
+  #resources :pages_texts
 
   resources :objects_infos
+  
+  get "pages_texts/index", :as => :index
+  get "pages_texts/legal_services", :as => :legal_services
+  get "pages_texts/independent_evaluation", :as => :independent_evaluation
+  get "pages_texts/land_managment", :as => :land_managment
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -52,7 +59,7 @@ AlphaP::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'pages_texts#index'
 
   # See how all your routes lay out with "rake routes"
 

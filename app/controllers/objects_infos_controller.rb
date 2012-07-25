@@ -2,7 +2,16 @@ class ObjectsInfosController < ApplicationController
   # GET /objects_infos
   # GET /objects_infos.json
   def index
-    @objects_infos = ObjectsInfo.all
+    #@objects_infos = ObjectsInfo.all
+    
+     seektype = params[:seektype] ? params[:seektype] : {}
+     seekplace = params[:seekplace] ? params[:seekplace] : {}
+     seekmaxprice = params[:seekmaxprice] ? params[:seekmaxprice] : {}
+     seekminprice = params[:seekminprice] ? params[:seekminprice] : {}
+
+	 @objects_infos = ObjectsInfo.where(:obj_type => seektype)
+	 
+	
 
     respond_to do |format|
       format.html # index.html.erb

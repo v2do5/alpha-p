@@ -1,14 +1,141 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>AlphaP</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link type="text/css" href="./style.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+	<script src="js/slides.min.jquery.js"></script>
+				<script type="text/javascript"> 
+       			$(function(){
+          		$("#slider").slides({
+            	preload: true,
+            	preloadImage: '/img/ajax-loader.gif',
+            	play: 5000,
+            	pause: 2500,
+            	slideSpeed: 600,
+            	hoverPause: true,
+            	generateNextPrev: false
+        		});
+        		});
+			</script>
+	<title>Альфа Плюс — Недвижимость Солнечногорска</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<div class="top_wrapper">
+		<div class="top_block_wrapper">
+			<div class="logo_block">
+				<div class="logo_img"></div>
+				<div class="tel_block">
+					<p class="red_tel">+7 (495) 745-23-86</p>
+					<p class="blue_days">Пн. – Пт.: 10:00 – 19:00</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="menu_wrapper">
+			<div class="left_menu_im"></div>
+			<div class="menu_im">
+				<div class="menu_im_wrap">
+					<a href="#">Недвижимость</a>
+					<%= link_to 'Независимая оценка', independent_evaluation_path %>
+					<%= link_to 'Юридические услуги', legal_services_path %>
+					<%= link_to 'Землеустройство', land_managment_path %>
+				</div>
+			</div>
+			<div class="right_menu_im"></div>
+		</div>
+		
+		<div class="white_grad_block">
+			<div class="slider_block">
+				<div class="slider">
+					<div class="last-section">
+            			<div id="slider"><div class="slides_container">
+                			<div><span class="inner_text_slider_big_first"><mark>Недвижимость Солнечногорска</mark></span>
+                			<span class="inner_text_slider_second">
+                				<mark>Благодаря многолетнему опыту наших сотрудников,<br></mark>
+								<mark>мы в кратчайшие сроки находим лучшие<br></mark>
+								<mark>предложения недвижимости в Солнечногорске для вас</mark>
+                			</span>
+                			<a href="#"><img class="slider_but" src="/img/know_more_slider_but.png"></a>
+                			<img src="/img/img2.png" width="659px" height="317px"/></div>
+                			
+                			<div><span class="inner_text_slider_big_first"><mark>Независимая оценка недвижимости</mark></span>
+                			<span class="inner_text_slider_second">
+                				<mark>Мы предоставляем услуги по независимой оценке<br></mark>
+								<mark>вашей недвижимости — узнайте реальную рыночную стоимость<br></mark>
+								<mark>своего имущества у наших специалистов</mark>
+                			</span>
+                			<a href="#"><img class="slider_but" src="/img/know_more_slider_but.png"></a>
+                   			<img src="/img/img1.png" width="659px" height="317px"/></div>
+                			
+                			<div><span class="inner_text_slider_big_first"><mark>Юридические услуги</mark></span>
+                			<span class="inner_text_slider_second">
+                				<mark>При необходимости, наши квалифицированные юристы<br></mark>
+								<mark>полностью сопроводят вашу сделаку</mark>
+                			</span>
+                			<a href="#"><img class="slider_but" src="/img/know_more_slider_but.png"></a>
+                			<img src="/img/img3.png" width="659px" height="317px"/></div>
+            			</div></div>
+            		</div>
+				</div>
+			</div>
+			<div class="adv_search">
+				<h3>Мне нужно купить:</h3>
+				<form method="get" action="/objects_infos">
+<div class="btn-group" data-toggle="buttons-radio">
+<input type="radio" name="seektype" value="" class="btn">Не важно</button>
+<input type="radio" name="seektype" value="Участок" class="btn">Участок</button>
+<input type="radio" name="seektype" value="Дом" class="btn">Дом</button>
+<input type="radio" name="seektype" value="Квартиру" class="btn">Квартиру</button>
+</div>
+				<h3 class="second_h3_search">Месторасположение:</h3>
+				<select name="seek_place">
+					<option value="Все районы">Все районы Солнечногорска</option>
+					<option value="Талаево">Талаево</option>
+					<option value="Редино">Редино</option>
+				</select>
+				<h3 class="third_h3_search">Цена в рублях:</h3>
+				<p>от&nbsp;<input name="seekminprice" type="text" size="11">&nbsp; до &nbsp;<input name="seekmaxprice" type="text" size="11"> руб.</p>
+				<input type="submit" class="main_but_search"></div>
+				</form>
+			</div>
+		</div>
+		
+		<div class="white_block_shadow"></div>
+		<div class="black_bottom_shadow"></div>
+	</div>
+	
+	<div class="main_wrapper">
+		<div class="main_page_wrapper">
+			<div class="main_page_left">
+				<%= yield %>
+			</div>
+			<div class="main_page_right">
+				<h2>Отзывы наших клиентов</h2>
+				<p><b>Алексей Рыбаков:</b><br>
+«Хотелось бы выразить особую благодарность специалистам за профессиональную работу и человеческий подход в решении сложной и очень важной лично для меня задачи, а именно - приобритения мною квартиры с условием расселения коммунальной площади. Спасибо!»</p>
+				<span class="refresh_cooment_a"><a href="#">Другой отзыв</a></span><span class="all_cooment_a"><a href="#">Все отзывы</a></span>
+				<h2 class="second_right_h">Связь с нами</h2>
+				<p>Наши телефоны в Солнечногорске:<br>
+				<span class="big_text_p">+7 (495) 592-45-15<br>
+				+7 (495) 305-39-97</span></p>
+				<a href="#"><img class="img_map_ico" src="/img/map_ico.png"></a><p>г. Солнечногорск,<br>Промышленный пр.,<br>д. 1Б, Офис №15.</p>
+				<a class="show_map" href="#">Посмотреть на карте</a>
+			</div>
+			
+		</div>
+	</div>
+	
+	<div class="footer_wrapper">
+		<div class="footer_text">
+			<div class="left_footer">© Copyright 2012, ООО «Альфа +», тел.: +7 (495) 592-45-15, +7 (495) 305-39-97</div>
+			<div class="right_footer">Информация на сайте не является публичной офертой.</div>
+		</div>
+	</div>
 
 </body>
 </html>

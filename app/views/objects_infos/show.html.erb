@@ -1,40 +1,51 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Obj name:</b>
+  <b>Название объекта: </b>
   <%= @objects_info.obj_name %>
 </p>
 
 <p>
-  <b>Obj type:</b>
+  <b>Категория объекта:</b>
   <%= @objects_info.obj_type %>
 </p>
 
 <p>
-  <b>Obj adress:</b>
+  <b>Адрес:</b>
   <%= @objects_info.obj_adress %>
 </p>
 
 <p>
-  <b>Obj info:</b>
+  <b>Информация:</b>
   <%= @objects_info.obj_info %>
 </p>
 
 <p>
-  <b>Obj room num:</b>
+  <b>Количество комнат:</b>
   <%= @objects_info.obj_room_num %>
 </p>
 
 <p>
-  <b>Obj area square:</b>
+  <b>Площадь:</b>
   <%= @objects_info.obj_area_square %>
 </p>
 
 <p>
-  <b>Obj price:</b>
+  <b>Цена:</b>
   <%= @objects_info.obj_price %>
 </p>
 
+<p>
+    <%= @objects_info.avatar %>
+</p>
 
-<%= link_to 'Edit', edit_objects_info_path(@objects_info) %> |
-<%= link_to 'Back', objects_infos_path %>
+<p>
+	
+
+<%= image_tag @objects_info.avatar_url(:thumb) if @objects_info.avatar? %>
+
+
+</p>
+
+<%= link_to 'Редактировать', edit_objects_info_path(@objects_info) %> |
+<%= link_to 'Назад', objects_infos_path %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120723130814) do
+ActiveRecord::Schema.define(:version => 20120725151947) do
 
   create_table "objects_infos", :force => true do |t|
     t.text     "obj_name"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20120723130814) do
     t.text     "obj_price"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+    t.string   "avatar"
   end
 
   create_table "pages_texts", :force => true do |t|
@@ -30,6 +31,24 @@ ActiveRecord::Schema.define(:version => 20120723130814) do
     t.text     "page_text"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "scans", :force => true do |t|
+    t.text     "keywords"
+    t.text     "category"
+    t.text     "minimum_price"
+    t.text     "maximum_price"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+  end
+
+  create_table "searches", :force => true do |t|
+    t.integer  "keywords"
+    t.integer  "category_id"
+    t.float    "minimum_price"
+    t.float    "maximum_price"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
 end

@@ -1,25 +1,20 @@
-<h1>Listing pages_texts</h1>
+<h1>Alpha Plus — недвижимость в Солнечногорске</h1>
+<p>Агентство недвижимости «Alpha+» — это команда высококвалифицированных специалистов с огромным багажом знаний и большим опытом работы в сфере недвижимости.</p>
 
-<table>
-  <tr>
-    <th>Page name</th>
-    <th>Page text</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<p>Спектр услуг, оказываемых специалистами Агентства, охватывает практически все области недвижимости и включает в себя сделки любой сложности.</p>
 
-<% @pages_texts.each do |pages_text| %>
-  <tr>
-    <td><%= pages_text.page_name %></td>
-    <td><%= pages_text.page_text %></td>
-    <td><%= link_to 'Show', pages_text %></td>
-    <td><%= link_to 'Edit', edit_pages_text_path(pages_text) %></td>
-    <td><%= link_to 'Destroy', pages_text, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
+<p>Внимательное и честное отношение, индивидуальный подход к каждому клиенту, готовность помочь в решении даже самых сложных жилищных проблем — только несколько аспектов, выгодно отличающих наше агентство. Мы стараемся работать так, чтобы нашим клиентам было с нами выгодно, удобно, комфортно и безопасно.</p>
+
+<div class="object_bottom"></div>
+<% @objects_info.each do |obj| %>
+	
+	<%= render "objects_infos/object_prew", obj:obj %>
+	
 <% end %>
-</table>
 
-<br />
 
-<%= link_to 'New Pages text', new_pages_text_path %>
+
+<div class="page_number_block">
+<%= paginate @objects_info %>
+
+</div>
