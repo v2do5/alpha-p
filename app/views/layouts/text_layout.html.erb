@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" >
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<%= stylesheet_link_tag    "application", :media => "all" %>
+ 	<%= javascript_include_tag "application" %>
+  	<%= csrf_meta_tags %>
+	<link type="text/css" href="./style.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script> 
+	<title>Недвижимость Солнечногорска «Альфа Плюс» — <%= yield(:title) %></title>
+
+</head>
+
+<body>
+	<div class="top_wrapper_assessment">
+		<div class="top_block_wrapper">
+			<div class="logo_block">
+				<div class="logo_img"></div>
+				<div class="tel_block">
+					<p class="red_tel">+7 (495) 745-23-86</p>
+					<p class="blue_days">Пн. – Пт.: 10:00 – 19:00</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="menu_wrapper">
+			<div class="left_menu_im"></div>
+			<div class="menu_im">
+				<div class="menu_im_wrap">
+					<a href="#">Недвижимость</a>
+					<%= link_to 'Независимая оценка', independent_evaluation_path %>
+					<%= link_to 'Юридические услуги', legal_services_path %>
+					<%= link_to 'Землеустройство', land_managment_path %>
+				</div>
+			</div>
+			<div class="right_menu_im"></div>
+		</div>
+		
+		<div class="white_grad_block_assessment">
+			<div class="assessment_main_left">
+			<%= yield %>
+			</div>
+		<div class="assessment_main_page_right">
+				<h2>Отзывы наших клиентов</h2>
+				<p><b>Алексей Рыбаков:</b><br>
+«Хотелось бы выразить особую благодарность специалистам за профессиональную работу и человеческий подход в решении сложной и очень важной лично для меня задачи, а именно - приобритения мною квартиры с условием расселения коммунальной площади. Спасибо!»</p>
+				<span class="refresh_cooment_a"><a href="#">Другой отзыв</a></span><span class="all_cooment_a"><a href="#">Все отзывы</a></span>
+				<h2 class="second_right_h">Связь с нами</h2>
+				<p>Наши телефоны в Солнечногорске:<br>
+				<span class="big_text_p">+7 (495) 592-45-15<br>
+				+7 (495) 305-39-97</span></p>
+				<a href="#"><img class="img_map_ico" src="/img/map_ico.png"></a><p>г. Солнечногорск,<br>Промышленный пр.,<br>д. 1Б, Офис №15.</p>
+				<a class="show_map" href="#">Посмотреть на карте</a>
+		</div>
+			
+	
+	<div class="white_block_shadow"></div>
+
+	
+	<div class="footer_wrapper_assessment">
+		<div class="footer_text">
+			<div class="left_footer">© Copyright 2012, ООО «Альфа +», тел.: +7 (495) 592-45-15, +7 (495) 305-39-97</div>
+			<div class="right_footer">Информация на сайте не является публичной офертой.</div>
+		</div>
+	</div>
+		
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Keywords:</b>
+  <%= @scan.keywords %>
+</p>
+
+<p>
+  <b>Category:</b>
+  <%= @scan.category %>
+</p>
+
+<p>
+  <b>Minimum price:</b>
+  <%= @scan.minimum_price %>
+</p>
+
+<p>
+  <b>Maximum price:</b>
+  <%= @scan.maximum_price %>
+</p>
+
+
+<%= link_to 'Edit', edit_scan_path(@scan) %> |
+<%= link_to 'Back', scans_path %>
