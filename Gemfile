@@ -28,6 +28,10 @@ group :test do
   gem 'webrat', '0.7.1'
 end
 
+group :production do
+  gem 'activerecord-postgresql-adapter'
+end
+
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'rmagick'

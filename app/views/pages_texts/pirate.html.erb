@@ -1,0 +1,35 @@
+<h1>Listing objects_infos</h1>
+
+<table>
+  <tr>
+    <th>Название</th>
+    <th>Категория</th>
+    <th>Адрес</th>
+    <th>Информация</th>
+    <th>Комнаты</th>
+    <th>Площадь</th>
+    <th>Цена</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @objects_infos.each do |objects_info| %>
+  <tr>
+    <td><%= objects_info.obj_name %></td>
+    <td><%= objects_info.obj_type %></td>
+    <td><%= objects_info.obj_adress %></td>
+    <td><%= objects_info.obj_info %></td>
+    <td><%= objects_info.obj_room_num %></td>
+    <td><%= objects_info.obj_area_square %></td>
+    <td><%= objects_info.obj_price %></td>
+    <td><%= link_to 'Показать', objects_info %></td>
+    <td><%= link_to 'Редактировать', edit_objects_info_path(objects_info) %></td>
+    <td><%= link_to 'Удалить', objects_info, method: :delete, data: { confirm: 'Точно удалить?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Objects info', new_objects_info_path %>
