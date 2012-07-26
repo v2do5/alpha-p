@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120725151947) do
+ActiveRecord::Schema.define(:version => 20120726153434) do
 
   create_table "objects_infos", :force => true do |t|
     t.text     "obj_name"
@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(:version => 20120725151947) do
     t.text     "obj_info"
     t.text     "obj_room_num"
     t.text     "obj_area_square"
-    t.text     "obj_price"
+    t.integer  "obj_price"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
     t.string   "avatar"

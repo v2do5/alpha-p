@@ -32,6 +32,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'rmagick'
 gem 'kaminari'
+gem 'russian', '0.6.0'
 
 gem 'jquery-rails'
 

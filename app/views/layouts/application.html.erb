@@ -18,6 +18,27 @@
         		});
         		});
 			</script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($){
+    	$('#radio_5').prop('disabled', true);
+    	$('#radio_2').prop('checked', true);
+    	$(document).on('change', 'input:radio, input:checkbox', function(){
+        if ($(this).attr('type') == 'radio') {
+            that = $(this);
+            $('input[name=' + $(this).attr('name') + ']').each(function() {
+                if ($(this) != that) $('label[for=' + $(this).attr('id') + ']').removeClass('active');             
+            });
+        }
+        if (this.checked) {
+            $(this).attr('checked', 'checked');
+            $('label[for=' + $(this).attr('id') + ']').addClass('active');
+        }else {
+            $(this).removeAttr('checked');
+            $('label[for=' + $(this).attr('id') + ']').removeClass('active');
+        }
+    });
+});
+	</script> 
 	<title>Альфа Плюс — Недвижимость Солнечногорска</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
@@ -40,7 +61,7 @@
 			<div class="left_menu_im"></div>
 			<div class="menu_im">
 				<div class="menu_im_wrap">
-					<a href="#">Недвижимость</a>
+					<%= link_to 'Недвижимость', index_path %>
 					<%= link_to 'Независимая оценка', independent_evaluation_path %>
 					<%= link_to 'Юридические услуги', legal_services_path %>
 					<%= link_to 'Землеустройство', land_managment_path %>
@@ -84,14 +105,18 @@
 				</div>
 			</div>
 			<div class="adv_search">
-				<h3>Мне нужно купить:</h3>
 				<form method="get" action="/objects_infos">
-<div class="btn-group" data-toggle="buttons-radio">
-<input type="radio" name="seektype" value="" class="btn">Не важно</button>
-<input type="radio" name="seektype" value="Участок" class="btn">Участок</button>
-<input type="radio" name="seektype" value="Дом" class="btn">Дом</button>
-<input type="radio" name="seektype" value="Квартиру" class="btn">Квартиру</button>
-</div>
+				<h3>Мне нужно купить:</h3>
+					<div class="btn-group">
+    					<input type="radio" name="seektype" value="All" id="radio_1" />
+   						<label class="btn" for="radio_1">Не важно</label>
+    					<input type="radio" name="seektype" value="Участок" id="radio_2" />
+    					<label class="btn" for="radio_2">Участок</label>
+    					<input type="radio" name="seektype" value="Дом" id="radio_3" />
+    					<label class="btn" for="radio_3">Дом</label>
+    					<input type="radio" name="seektype" value="Квартира" id="radio_4" />
+    					<label class="btn" for="radio_4">Квартиру</label>
+					</div>
 				<h3 class="second_h3_search">Месторасположение:</h3>
 				<select name="seek_place">
 					<option value="Все районы">Все районы Солнечногорска</option>
@@ -99,8 +124,8 @@
 					<option value="Редино">Редино</option>
 				</select>
 				<h3 class="third_h3_search">Цена в рублях:</h3>
-				<p>от&nbsp;<input name="seekminprice" type="text" size="11">&nbsp; до &nbsp;<input name="seekmaxprice" type="text" size="11"> руб.</p>
-				<input type="submit" class="main_but_search"></div>
+				<p>от&nbsp;<input name="seekminprice" value="0" type="text" size="11">&nbsp; до &nbsp;<input name="seekmaxprice" value="100000000" type="text" size="11"> руб.</p>
+				<div type="submit" value="submit" class="main_but_search" onclick="javascript:this.parentNode.submit();"></div>
 				</form>
 			</div>
 		</div>

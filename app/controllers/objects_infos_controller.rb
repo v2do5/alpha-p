@@ -1,3 +1,5 @@
+#encoding: utf-8
+
 class ObjectsInfosController < ApplicationController
   # GET /objects_infos
   # GET /objects_infos.json
@@ -8,10 +10,14 @@ class ObjectsInfosController < ApplicationController
      seekplace = params[:seekplace] ? params[:seekplace] : {}
      seekmaxprice = params[:seekmaxprice] ? params[:seekmaxprice] : {}
      seekminprice = params[:seekminprice] ? params[:seekminprice] : {}
-
-	 @objects_infos = ObjectsInfo.where(:obj_type => seektype)
-	 
-	
+     
+     
+	 if seektype == "All"
+	   @objects_infos = ObjectsInfo.page(params[:page]).per(10)
+	 else
+ 	   @objects_infos = ObjectsInfo.where(:obj_type => seektype, :obj_price => seekminprice..seekmaxprice).page(params[:page]).per(10)
+	 end
+                            	
 
     respond_to do |format|
       format.html # index.html.erb
