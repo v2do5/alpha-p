@@ -1,7 +1,10 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'
+
 gem 'sqlite3', :group => :development
+gem "pg", :group => :production
+
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'rmagick'
