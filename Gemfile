@@ -12,7 +12,7 @@ gem 'kaminari'
 gem 'russian', '0.6.0'
 gem 'heroku'
 gem 'aws-s3'
-gem "fog", "~> 1.3.1"
+gem "fog"
 
 gem 'jquery-rails'
 group :assets do

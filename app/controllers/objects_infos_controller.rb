@@ -12,7 +12,7 @@ class ObjectsInfosController < ApplicationController
      seekminprice = params[:seekminprice] ? params[:seekminprice] : {}
      
      
-	 if seektype == "All"
+	 if seektype == "All" || seektype.empty?
 	   @objects_infos = ObjectsInfo.page(params[:page]).per(10)
 	 else
  	   @objects_infos = ObjectsInfo.where(:obj_type => seektype, :obj_price => seekminprice..seekmaxprice).page(params[:page]).per(10)
