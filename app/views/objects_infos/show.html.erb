@@ -1,9 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Название объекта: </b>
-  <%= @objects_info.obj_name %>
-</p>
+
+<h1><%= @objects_info.obj_name %></h1>
+<%= image_tag @objects_info.avatar_url(:largephoto) if @objects_info.avatar? %>
 
 <p>
   <b>Категория объекта:</b>
