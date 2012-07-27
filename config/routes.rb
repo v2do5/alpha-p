@@ -1,6 +1,5 @@
 AlphaP::Application.routes.draw do
-  devise_for :users
-
+  devise_for :user
   resources :scans
 
   #resources :pages_texts
