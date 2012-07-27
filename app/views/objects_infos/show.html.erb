@@ -39,12 +39,8 @@
 </p>
 
 <p>
-	
-
-<%= image_tag @objects_info.avatar_url(:thumb) if @objects_info.avatar? %>
-
 
 </p>
 
-<%= link_to 'Редактировать', edit_objects_info_path(@objects_info) %> |
-<%= link_to 'Назад', objects_infos_path %>
+<p><%= link_to 'Редактировать', edit_objects_info_path(@objects_info) %> |
+<%= link_to 'Назад', objects_infos_path %></p>
