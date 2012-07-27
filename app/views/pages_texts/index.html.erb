@@ -6,6 +6,15 @@
 <p>Внимательное и честное отношение, индивидуальный подход к каждому клиенту, готовность помочь в решении даже самых сложных жилищных проблем — только несколько аспектов, выгодно отличающих наше агентство. Мы стараемся работать так, чтобы нашим клиентам было с нами выгодно, удобно, комфортно и безопасно.</p>
 
 <div class="object_bottom"></div>
+<p><b>
+  <% if user_signed_in? %>
+    Большой брат следит за тобой, <%= current_user.email %>
+    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+  <% else %>
+    <%= link_to "Sign in", new_user_session_path %>
+  <% end %>
+</b></p>
+
 <% @objects_info.each do |obj| %>
 	
 	<%= render "objects_infos/object_prew", obj:obj %>

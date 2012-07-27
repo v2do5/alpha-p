@@ -16,8 +16,7 @@ class ObjectsInfosController < ApplicationController
 	   @objects_infos = ObjectsInfo.page(params[:page]).per(10)
 	 else
  	   @objects_infos = ObjectsInfo.where(:obj_type => seektype, :obj_price => seekminprice..seekmaxprice).page(params[:page]).per(10)
-	 end
-                            	
+	 end                            	
 
     respond_to do |format|
       format.html # index.html.erb
@@ -29,6 +28,8 @@ class ObjectsInfosController < ApplicationController
   # GET /objects_infos/1.json
   def show
     @objects_info = ObjectsInfo.find(params[:id])
+    
+	@objects_similar = ObjectsInfo.where(:obj_type => @objects_info.obj_type).limit(4)
 
     respond_to do |format|
       format.html # show.html.erb

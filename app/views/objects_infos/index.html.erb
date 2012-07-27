@@ -1,5 +1,15 @@
 <h1>Недвижимость Солнечногорска</h1>
 
+<p>
+  <% if user_signed_in? %>
+    Большой брат следит за тобой, <%= current_user.email %>
+    <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
+  <% else %>
+    <%= link_to "Sign up", new_user_registration_path %> or <%= link_to "sign in", new_user_session_path %>
+  <% end %>
+</p>
+
+
 <% @objects_infos.each do |obj| %>
 	
 	<%= render "objects_infos/object_prew", obj:obj %>
