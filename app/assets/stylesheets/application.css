@@ -601,7 +601,7 @@ input[disabled] + label.btn {
 mark{
 	background-color: #000;
 	color: #fff;
-	padding: 6px 8px 4px 8px;
+	padding: 3px 8px 4px 8px;
 }
 
 .inner_text_slider{
