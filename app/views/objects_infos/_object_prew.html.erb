@@ -7,12 +7,12 @@
 	<p>Адрес: <b><%= obj.obj_adress %></b><br>
 	Площадь участка: <b> <%= obj.obj_area_square %></b></p>
 	<span class="price_block"><%= obj.obj_price %> руб.</span>
-	<a class="know_more_button_sprite" href="#"></a>
+	<%= link_to '', obj, :class => 'know_more_button_sprite' %>
+	<br>
 	<p><%= link_to 'Показать', obj %>
     <%= link_to 'Редактировать', edit_objects_info_path(obj) %>
 	<%= link_to 'Удалить', obj, method: :delete, data: { confirm: 'Точно удалить?' } %></p>
 </div>
+		<div class="object_bottom"></div>
 
 
-
-<div class="object_bottom"></div>

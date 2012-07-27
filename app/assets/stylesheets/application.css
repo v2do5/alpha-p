@@ -205,6 +205,16 @@ input[disabled] + label.btn {
 	font-weight: bold;
 }
 
+.create_objects_new{
+	font-family: Myriad Pro, Arial, Helvetica;
+	font-size: 18px;
+	text-decoration: underline;
+}
+
+.create_objects_new img{
+	padding-right: 5px;
+}
+
 .prev a{
 	color: #256aae;
 	font-family: Myriad Pro, Arial, Helvetica;
