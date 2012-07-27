@@ -1,5 +1,9 @@
 CarrierWave.configure do |config|
-  config.s3_access_key_id = "AKIAIIR7LH5DQKMSQ7CQ"
-  config.s3_secret_access_key = "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"
-  config.s3_bucket = "alpha-p-files"
+  config.fog_credentials = {
+    :provider               => 'AWS',       # required
+    :aws_access_key_id      => 'AKIAIIR7LH5DQKMSQ7CQ',       # required
+    :aws_secret_access_key  => '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',       # required
+    :region                 => 'eu-west-1'  # optional, defaults to 'us-east-1'
+  }
+  config.fog_directory  = 'Ireland'                     # required
 end
