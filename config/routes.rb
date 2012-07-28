@@ -1,9 +1,8 @@
 AlphaP::Application.routes.draw do
-  devise_for :users
   resources :scans
-
+  
   #resources :pages_texts
-
+  devise_for :user
   resources :objects_infos
   
   get "pages_texts/index", :as => :index
