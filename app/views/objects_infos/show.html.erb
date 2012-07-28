@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 
 
 <h1><%= @objects_info.obj_name %></h1>
@@ -10,30 +9,28 @@
 </p>
 
 <p>
-  <b>Информация:</b>
-  <%= @objects_info.obj_info %>
-</p>
-
-<p>
-  <b>Количество комнат:</b>
-  <%= @objects_info.obj_room_num %>
-</p>
-
-<p>
   <b>Площадь:</b>
   <%= @objects_info.obj_area_square %>
 </p>
 
 <p>
-  <b>Цена:</b>
-  <%= @objects_info.obj_price %> руб.
+  <b>Информация:</b>
+  <%= @objects_info.obj_info %>
 </p>
-<h3>Похожие объекты:</h3>
-  <% @objects_similar.each do |similar| %>
+
+<p>
+  <span class="price_block">
+  <%= @objects_info.obj_price %> руб.
+  </span></br>
+</p>
+<h2>Похожие объекты:</h2>
+  <p><% @objects_similar.each do |similar| %>
   
-    <%= similar.obj_name %>
+    <%= link_to similar.obj_name, similar %>
+    <%= image_tag similar.avatar_url(:thumb) if similar.avatar? %><p>
   
   <% end %>
 
 <p><%= link_to 'Редактировать', edit_objects_info_path(@objects_info) %> |
 <%= link_to 'Назад', objects_infos_path %></p>
+<p id="notice"><%= notice %></p>

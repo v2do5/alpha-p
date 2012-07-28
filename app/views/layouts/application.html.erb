@@ -65,6 +65,7 @@
 					<%= link_to 'Независимая оценка', independent_evaluation_path %>
 					<%= link_to 'Юридические услуги', legal_services_path %>
 					<%= link_to 'Землеустройство', land_managment_path %>
+					<%= link_to 'Контакты', contacts_path %>
 				</div>
 			</div>
 			<div class="right_menu_im"></div>
@@ -141,13 +142,13 @@
 				<h2>Отзывы наших клиентов</h2>
 				<p><b>Алексей Рыбаков:</b><br>
 «Хотелось бы выразить особую благодарность специалистам за профессиональную работу и человеческий подход в решении сложной и очень важной лично для меня задачи, а именно - приобритения мною квартиры с условием расселения коммунальной площади. Спасибо!»</p>
-				<span class="refresh_cooment_a"><a href="#">Другой отзыв</a></span><span class="all_cooment_a"><a href="#">Все отзывы</a></span>
+				<span class="all_cooment_a"><%= link_to 'Все отзывы', review_path %></span>
 				<h2 class="second_right_h">Связь с нами</h2>
 				<p>Наши телефоны в Солнечногорске:<br>
 				<span class="big_text_p">+7 (495) 592-45-15<br>
 				+7 (495) 305-39-97</span></p>
-				<a href="#"><img class="img_map_ico" src="/img/map_ico.png"></a><p>г. Солнечногорск,<br>Промышленный пр.,<br>д. 1Б, Офис №15.</p>
-				<a class="show_map" href="#">Посмотреть на карте</a>
+				<img class="img_map_ico" src="/img/map_ico.png"><p>г. Солнечногорск,<br>Промышленный пр.,<br>д. 1Б, Офис №15.</p>
+				<p class="show_map" href="#"><%= link_to 'Посмотреть на карте', contacts_path %></p>
 			</div>
 			
 		</div>

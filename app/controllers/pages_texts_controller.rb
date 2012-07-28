@@ -17,4 +17,12 @@ class PagesTextsController < ApplicationController
   	render :layout => "text_layout"
   end
   
+  def review
+  	render :layout => "text_layout"
+  end
+  
+  def contacts
+  	render :layout => "text_layout"
+  end
+  
  end

@@ -8,6 +8,8 @@ AlphaP::Application.routes.draw do
   get "pages_texts/legal_services", :as => :legal_services
   get "pages_texts/independent_evaluation", :as => :independent_evaluation
   get "pages_texts/land_managment", :as => :land_managment
+  get "pages_texts/review", :as => :review
+  get "pages_texts/contacts", :as => :contacts
      
   # The priority is based upon order of creation:
   # first created -> highest priority.

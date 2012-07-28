@@ -362,7 +362,6 @@ input[disabled] + label.btn {
 
 .all_cooment_a a{
 	text-decoration: underline;
-	margin-left: 20px;
 	color: #1f5a95;
 	font-family: Myriad Pro, Arial, Helvetica;
 	font-size: 14px;
@@ -379,11 +378,23 @@ input[disabled] + label.btn {
 	padding-bottom: 15px;
 }
 
+.contacts_p p{
+	font-size: 16px;
+}
+
 .show_map{
 	text-decoration: underline;
 	color: #1f5a95;
 	font-family: Myriad Pro, Arial, Helvetica;
 	font-size: 14px;
+}
+
+.show_map a{
+	color: #1f5a95;	
+}
+
+.show_map a:hover{
+	color: #b61a1a;	
 }
 
 .object_bottom{
@@ -446,6 +457,7 @@ input[disabled] + label.btn {
 	font-family: Myriad Pro, Arial, Helvetica;
 	font-size: 20px;
 	color: #0f0f0f;
+	margin-top: 5px;
 }
 
 .main_page_left h2{
