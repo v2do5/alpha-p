@@ -194,7 +194,7 @@ DEPENDENCIES
   rails (= 3.2.6)
   rmagick
   rspec-rails (= 2.6.1)
-  russian (= 0.6.0)
+  russian
   sass-rails (~> 3.2.3)
   sqlite3
   uglifier (>= 1.0.3)
