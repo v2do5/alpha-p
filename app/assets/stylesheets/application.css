@@ -680,8 +680,10 @@ mark{
 .logo_img{
 	width: 673px;
 	float: left;
-	display: block;
+	height: 30px;
 	text-align: left;
+	padding-top: 9px;
+	padding-left: 15px;
 }
 
 .tel_block{
