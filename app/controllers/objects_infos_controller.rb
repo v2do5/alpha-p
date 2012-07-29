@@ -13,9 +13,9 @@ class ObjectsInfosController < ApplicationController
      
      
 	 if seektype == "All" || seektype.empty?
-	   @objects_infos = ObjectsInfo.page(params[:page]).per(10)
+	   @objects_infos = ObjectsInfo.page(params[:page]).per(4)
 	 else
- 	   @objects_infos = ObjectsInfo.where(:obj_type => seektype).page(params[:page]).per(10)
+ 	   @objects_infos = ObjectsInfo.where(:obj_type => seektype).page(params[:page]).per(4)
 	 end                            	
 
     respond_to do |format|
