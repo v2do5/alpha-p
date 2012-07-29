@@ -1,0 +1,21 @@
+<% content_for :title do %>Контакты<% end %> 
+<h1>Контакты</h1>
+<div class="contacts_p"><p>
+	<b>Телефон:</b></br>
+	+7 (499) 756-19-05</br>
+	+7 (495) 745-23-86
+</p>
+
+<p>
+	<b>Адрес:</b><br>
+	141504, Московская обл., г. Солнечногорск, Промышленный проезд, д.1б, офис 15
+</p>
+
+<!-- Этот блок кода нужно вставить в ту часть страницы, где вы хотите разместить карту (начало) -->
+<div id="ymaps-map-id_134351056011991085906" style="width: 640px; height: 450px;"></div>
+<div style="width: 640px; text-align: right;"></div>
+<script type="text/javascript">function fid_134351056011991085906(ymaps) {var map = new ymaps.Map("ymaps-map-id_134351056011991085906", {center: [36.992546591581444, 56.17363930008922], zoom: 15, type: "yandex#map"});map.controls.add("zoomControl").add("mapTools").add(new ymaps.control.TypeSelector(["yandex#map", "yandex#satellite", "yandex#hybrid", "yandex#publicMap"]));map.geoObjects.add(new ymaps.Placemark([36.992660317309, 56.17300468745323], {balloonContent: "Офис компании «Альфа Плюс» — недвижимость Солнечногорска"}, {preset: "twirl#blueDotIcon"}));};</script>
+<script type="text/javascript" src="http://api-maps.yandex.ru/2.0/?coordorder=longlat&load=package.full&wizard=constructor&lang=ru-RU&onload=fid_134351056011991085906"></script>
+<!-- Этот блок кода нужно вставить в ту часть страницы, где вы хотите разместить карту (конец) -->
+<br>
+</div>
