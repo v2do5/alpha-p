@@ -29,7 +29,7 @@
 <h2>Похожие объекты:</h2>
   	<% @objects_similar.each do |similar| %>
   	<div class="similar_objects">
-  	<%= link_to 'obj.obj_name' do %>
+  	<%= link_to similar do %>
       <%= image_tag similar.avatar_url(:thumb) if similar.avatar? %>
     <% end %>
     <p><%= link_to similar.obj_name, similar %></p>
