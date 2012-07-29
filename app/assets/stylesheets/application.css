@@ -174,8 +174,8 @@ input[disabled] + label.btn {
 	font-family: Myriad Pro, Arial, Helvetica;
 	font-size: 14px;
 	text-decoration: none;
-	background:url('/img/page_num_ico.png');
-	width: 20px;
+	background:url('/img/page_num_ico.png') no-repeat;
+	width: 30px;
 	height: 25px;
 	font-weight: bold;
 	padding: 6px 6px 5px 9px;
