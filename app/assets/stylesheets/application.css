@@ -383,7 +383,6 @@ input[disabled] + label.btn {
 }
 
 .show_map{
-	text-decoration: underline;
 	color: #1f5a95;
 	font-family: Myriad Pro, Arial, Helvetica;
 	font-size: 14px;
@@ -391,6 +390,7 @@ input[disabled] + label.btn {
 
 .show_map a{
 	color: #1f5a95;	
+	text-decoration: underline;
 }
 
 .show_map a:hover{

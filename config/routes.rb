@@ -1,5 +1,4 @@
 AlphaP::Application.routes.draw do
-  resources :scans
   
   #resources :pages_texts
   resources :objects_infos
