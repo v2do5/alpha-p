@@ -24,10 +24,11 @@
   </span></br>
 </p>
 <h2>Похожие объекты:</h2>
-  <p><% @objects_similar.each do |similar| %>
-  
-    <%= link_to similar.obj_name, similar %>
-    <%= image_tag similar.avatar_url(:thumb) if similar.avatar? %><p>
+  	<% @objects_similar.each do |similar| %>
+  	<div class="similar_objects">
+    <%= image_tag similar.avatar_url(:thumb) if similar.avatar? %>
+    <p><%= link_to similar.obj_name, similar %></p>
+    </div>
   
   <% end %>
 

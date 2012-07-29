@@ -791,6 +791,14 @@ mark{
 	background: transparent url(/img/search_main_but_sprite.png) 0px -35px no-repeat;
 }
 
+.similar_objects{
+	float: left;
+}
+
+.similar_objects p{
+	width: 135px;
+}
+
 /*
     Slider Pagination
 */
