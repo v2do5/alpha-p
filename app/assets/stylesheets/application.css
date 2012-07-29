@@ -793,6 +793,7 @@ mark{
 
 .similar_objects{
 	float: left;
+	margin-right: 10px;
 }
 
 .similar_objects p{
