@@ -1,5 +1,5 @@
 AlphaP::Application.routes.draw do
-  
+  devise_for :user
   #resources :pages_texts
   resources :objects_infos
   
