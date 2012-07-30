@@ -12,9 +12,12 @@
 	<%= link_to '', obj, :class => 'know_more_button_sprite' %>
 	<br>
 	<p>
-	<%= link_to 'Показать', obj %>
-    <%= link_to 'Редактировать', edit_objects_info_path(obj) %>
-	<%= link_to 'Удалить', obj, method: :delete, data: { confirm: 'Точно удалить?' } %></p>
+	<% if can? :update, obj %>
+      <%= link_to 'Редактировать', edit_objects_info_path(obj) %>
+    <% end %>
+    <% if can? :destroy, obj %>
+	  <%= link_to 'Удалить', obj, method: :delete, data: { confirm: 'Точно удалить?' } %></p>
+    <% end %>
 </div>
 		<div class="object_bottom"></div>
 

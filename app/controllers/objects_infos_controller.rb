@@ -28,6 +28,7 @@ class ObjectsInfosController < ApplicationController
   # GET /objects_infos/1.json
   def show
     @objects_info = ObjectsInfo.find(params[:id])
+    authorize! :read, @article
     
 	@objects_similar = ObjectsInfo.where(:obj_type => @objects_info.obj_type).limit(4)
 

@@ -1,4 +1,6 @@
 AlphaP::Application.routes.draw do
+  devise_for :users
+
   #resources :pages_texts
   resources :objects_infos
   
@@ -8,7 +10,7 @@ AlphaP::Application.routes.draw do
   get "pages_texts/land_managment", :as => :land_managment
   get "pages_texts/review", :as => :review
   get "pages_texts/contacts", :as => :contacts
-     
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

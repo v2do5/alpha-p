@@ -1,6 +1,7 @@
 class PagesTextsController < ApplicationController
   # GET /pages_texts
   # GET /pages_texts.json
+  load_and_authorize_resource
   
   def index
   	@objects_info = ObjectsInfo.order("obj_name").page(params[:page]).per(6)
