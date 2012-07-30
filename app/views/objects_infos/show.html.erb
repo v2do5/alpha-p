@@ -23,8 +23,11 @@
   <%= @objects_info.obj_price %> руб.
   </span></br>
 </p>
-<p style="clear:both"><%= link_to 'Редактировать', edit_objects_info_path(@objects_info) %> |
-<%= link_to 'Назад', objects_infos_path %></p>
+<p style="clear:both">
+<% if can? :update, @objects_info %>
+  <%= link_to 'Редактировать', edit_objects_info_path(@objects_info) %>
+<% end %>
+</p>
 <p id="notice"><%= notice %></p>
 <h2>Похожие объекты:</h2>
   	<% @objects_similar.each do |similar| %>
