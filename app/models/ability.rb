@@ -5,6 +5,7 @@ class Ability
     can :read, :all
     
     if user.blank?
+    	can :read, :all
     else
     	can :update, ObjectsInfo
     	can :destroy, ObjectsInfo
