@@ -8,6 +8,7 @@ class Ability
     else
     	can :update, ObjectsInfo
     	can :destroy, ObjectsInfo
+    	can :create, ObjectsInfo
     end
 
     # Define abilities for the passed in user here. For example:
