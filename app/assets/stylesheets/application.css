@@ -375,7 +375,7 @@ input[disabled] + label.btn {
 	margin-top: 15px;
 	clear: both;
 	height: 135px;
-	padding-bottom: 15px;
+	padding-bottom: 5px;
 }
 
 .contacts_p p{
