@@ -14,6 +14,7 @@ gem 'heroku'
 gem 'aws-s3'
 gem 'fog'
 gem 'devise'
+gem 'cancan'
 
 gem 'jquery-rails'
 group :assets do
