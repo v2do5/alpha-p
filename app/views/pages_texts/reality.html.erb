@@ -1,0 +1,23 @@
+<h1>Недвижимость Солнечногорска</h1>
+<p>Спектр услуг, оказываемых специалистами Агентства, охватывает практически все области недвижимости и включает в себя сделки любой сложности.</p>
+
+<p>Внимательное и честное отношение, индивидуальный подход к каждому клиенту, готовность помочь в решении даже самых сложных жилищных проблем — только несколько аспектов, выгодно отличающих наше агентство. Мы стараемся работать так, чтобы нашим клиентам было с нами выгодно, удобно, комфортно и безопасно.</p>
+
+<div class="object_bottom"></div>
+
+
+
+<% @objects_info.each do |obj| %>
+	
+	<%= render "objects_infos/object_prew", obj:obj %>
+	
+<% end %>
+
+<% if can? :create, ObjectsInfo %>
+<span class="create_objects_new"><img src="http://cdn1.iconfinder.com/data/icons/basicset/plus_16.png"><%= link_to 'Создать новый объект', new_objects_info_path %></span>
+<% end %>
+
+<div class="page_number_block">
+<%= paginate @objects_info %>
+
+</div>
