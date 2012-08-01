@@ -5,6 +5,7 @@ AlphaP::Application.routes.draw do
   resources :objects_infos
   
   get "pages_texts/index", :as => :index
+  get "pages_texts/reality", :as => :reality
   get "pages_texts/legal_services", :as => :legal_services
   get "pages_texts/independent_evaluation", :as => :independent_evaluation
   get "pages_texts/land_managment", :as => :land_managment

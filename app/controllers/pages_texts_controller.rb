@@ -7,6 +7,10 @@ class PagesTextsController < ApplicationController
   	@objects_info = ObjectsInfo.order("obj_name").page(params[:page]).per(6)
   end
 
+  def reality
+  	@objects_info = ObjectsInfo.order("obj_name").page(params[:page]).per(6)
+  end
+
   def legal_services
   	render :layout => "text_layout"
   end
