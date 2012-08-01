@@ -574,8 +574,8 @@ input[disabled] + label.btn {
 	margin: 0 auto;
 	background-image: url(/img/white_grad_block.png);
 	width: 980px;
-	height: 335px;
-	margin-top: 80px;
+	height: 415px;
+	margin-top: 0px;
 }
 
 .white_grad_block_assessment{
