@@ -8,7 +8,7 @@
 	<h3><%= link_to obj.obj_name, obj %></h3>
 	<p><b>Адрес:</b> <%= obj.obj_adress %><br>
 	<b>Площадь участка:</b> <%= obj.obj_area_square %></p>
-	<span class="price_block"><%= obj.obj_price %> руб.</span>
+	<span class="price_block"><%= number_with_delimiter(obj.obj_price, :delimiter => " ") %> руб.</span>
 	<%= link_to '', obj, :class => 'know_more_button_sprite' %>
 	<br>
 	<p>

@@ -20,7 +20,7 @@
 
 <p>
   <span class="price_block">
-  <%= @objects_info.obj_price %> руб.
+  <%= number_with_delimiter(@objects_info.obj_price, :delimiter => " ") %> руб.
   </span></br>
 </p>
 <p style="clear:both">
