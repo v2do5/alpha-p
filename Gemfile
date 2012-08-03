@@ -15,6 +15,7 @@ gem 'aws-s3'
 gem 'fog'
 gem 'devise'
 gem 'cancan'
+gem 'nested_form'
 
 gem 'jquery-rails'
 group :assets do
