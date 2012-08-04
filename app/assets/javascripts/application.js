@@ -13,3 +13,34 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(function(){
+$("#slider").slides({
+preload: true,
+preloadImage: '/img/ajax-loader.gif',
+play: 5000,
+pause: 2500,
+slideSpeed: 600,
+hoverPause: true,
+generateNextPrev: false
+});
+
+$('#radio_5').prop('disabled', true);
+    	$('#radio_2').prop('checked', true);
+    	$(document).on('change', 'input:radio, input:checkbox', function(){
+        if ($(this).attr('type') == 'radio') {
+            that = $(this);
+            $('input[name=' + $(this).attr('name') + ']').each(function() {
+                if ($(this) != that) $('label[for=' + $(this).attr('id') + ']').removeClass('active');             
+            });
+        }
+        if (this.checked) {
+            $(this).attr('checked', 'checked');
+            $('label[for=' + $(this).attr('id') + ']').addClass('active');
+        }else {
+            $(this).removeAttr('checked');
+            $('label[for=' + $(this).attr('id') + ']').removeClass('active');
+        }
+    });
+
+});

@@ -1,8 +1,9 @@
 
 
 <h1><%= @objects_info.obj_name %></h1><br>
-<%= image_tag @objects_info.avatar_url(:largephoto) if @objects_info.avatar? %>
-
+<% @objects_info.attachments each |attach| %>
+  <%= image_tag attach.avatar_url(:largephoto) %>
+<% end %>
 <p>
   <b>Адрес:</b>
   <%= @objects_info.obj_adress %>
