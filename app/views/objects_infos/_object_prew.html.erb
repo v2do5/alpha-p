@@ -3,7 +3,6 @@
 
 <div class="object_list">
 	<%= link_to obj do %>
-	<%= image_tag obj.avatar_url(:thumb) if obj.avatar? %>
 	<% end %>
 	<h3><%= link_to obj.obj_name, obj %></h3>
 	<p><b>Адрес:</b> <%= obj.obj_adress %><br>
