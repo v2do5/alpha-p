@@ -1,7 +1,7 @@
 
 
 <h1><%= @objects_info.obj_name %></h1><br>
-<% @objects_info.attachments each |attach| %>
+<% @objects_info.attachments.each do |attach| %>
   <%= image_tag attach.avatar_url(:largephoto) %>
 <% end %>
 <p>
